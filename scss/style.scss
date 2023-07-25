@@ -1,0 +1,48 @@
+@import 'mixins/mixins';
+
+@include reset(); // Сброс стилей
+
+@import 'mixingrid/mixingrid';
+
+// Переменные для кастомизации Mixingrid
+$columns: 12; // Колличество колонок
+$max-width: 1450px; // Максимальная ширина контейнера
+$gutter: 15px; // Расстояние между колонками
+$offset: 20px; // Поля контейнера
+$offset-sm: 15px; // Поля контейнера на мобилке
+// Брэйкпоинты
+$break_xl: 15000px;
+$break_lg: 1200px;
+$break_md: 1050px;
+$break_sm: 768px;
+$break_xs: 500px;
+
+// Шрифты
+@include font-face("Kelpo", "../fonts/kelpo_DEMO/FontsFree-Net-KelpoDemo-MVv9J", normal, normal, $exts: woff2 woff ttf);
+@include font-face("Roboto", "../fonts/roboto/roboto-v30-latin-regular", normal, normal, $exts: woff2 woff ttf);
+@include font-face("Roboto", "../fonts/roboto/roboto-v30-latin-500", 500, normal, $exts: woff2 woff ttf);
+
+// Цвета
+$primary_color: #EC0187;
+$secondary_color: #99DDE3;
+$text_color: #AE909D;
+
+// Подключение файлов
+@import 'blocks/settings';
+// @import 'hamburgers/hamburgers';
+// @import 'blocks/template';
+// @import 'blocks/popup';
+// @import 'blocks/tabs';
+// @import 'blocks/accordion';
+// @import 'blocks/js-scrollup';
+// @import 'blocks/counter';
+@import 'blocks/btn';
+@import 'blocks/title';
+@import 'blocks/subtitle';
+
+@import 'blocks/header';
+@import 'blocks/welcome-slider';
+@import 'blocks/benefit';
+
+@import 'blocks/footer';
+// @import 'blocks/menu';

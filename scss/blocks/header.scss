@@ -1,0 +1,47 @@
+/* header */
+.header { 
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2em 0 0.5em;
+  z-index: 30;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    
+  }
+  &__logo {
+    display: block;
+    width: 14em;
+    img {
+      display: block;
+    }
+  }
+}
+
+// stiky menu
+#headerSticky {
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 0;
+    background-color: #FFF1F7;
+    box-shadow: 0 0 20px rgba(236,1,135,.3);
+    animation: showStyky 0.5s;
+  }
+}
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+/* /header */

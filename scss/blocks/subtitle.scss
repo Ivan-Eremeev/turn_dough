@@ -1,0 +1,11 @@
+/* subtitle */
+.subtitle { 
+  font-family: "Kelpo";
+  font-size: 4em;
+  line-height: 86%;
+  &--blue {
+    color: $secondary_color;
+    text-shadow: -0.1em 0.1em #5C2D95;
+  }
+}
+/* /subtitle */

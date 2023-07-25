@@ -1,0 +1,87 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome-slider
+      .welcome-slider
+        .welcome-slider__bg 
+          img(src="img/welcome-slider-bg.jpg", alt="")
+        .welcome-slider__arrow.welcome-slider__arrow--prev.swiper-button-prev
+          img(src="img/arrow-slider.svg", alt="")
+        .welcome-slider__arrow.welcome-slider__arrow--next.swiper-button-next
+          img(src="img/arrow-slider.svg", alt="")
+        .welcome-slider__slider 
+          #sliderWelcolme 
+            .swiper-wrapper 
+
+              .swiper-slide 
+                .wrapper 
+                  .welcome-slider__content 
+                    .title Turning Dough into Delicious Moments: 
+                      span Discover the Joy of Chimney Cakes with TurnDough
+                  .welcome-slider__img 
+                    img(src="img/welcome-slider/img-1.png", alt="")
+
+              .swiper-slide 
+                .wrapper 
+                  .welcome-slider__content 
+                    .title Discover <br>the Timeless <br>Delight
+                    .welcome-slider__text It all began in the 18th century <br>when Trdelník, a delectable <br>European masterpiece, made <br>its grand entrance.
+                  .welcome-slider__img 
+                    img(src="img/welcome-slider/img-2.png", alt="")
+
+              .swiper-slide 
+                .wrapper 
+                  .welcome-slider__content 
+                    .title Cherished <br>Delight
+                    .welcome-slider__text Central European families cherished <br>this heavenly dessert, reserving it for <br>magical moments.
+                  .welcome-slider__img 
+                    img(src="img/welcome-slider/img-3.png", alt="")
+
+              .swiper-slide 
+                .wrapper 
+                  .welcome-slider__content 
+                    .title From Cobblestones <br>to California Dreams
+                    .welcome-slider__text Fast forward to 2017 when David, a Prague native, <br>waved goodbye to the cobblestone streets and <br>embarked on an adventure to sunny Los Angeles.
+                  .welcome-slider__img 
+                    img(src="img/welcome-slider/img-4.png", alt="")
+              
+              .swiper-slide 
+                .wrapper 
+                  .welcome-slider__content 
+                    .title Passion Turned <br>Success
+                    .welcome-slider__text Armed with his passion for sweet delights, he established <br>the renowned company known as Turn Dough, sprinkling <br>joy across the American desert landscape.
+                  .welcome-slider__img 
+                    img(src="img/welcome-slider/img-5.png", alt="")
+      // /welcome-slider
+
+      // benefit
+      .benefit
+        .wrapper  
+          .benefit__content 
+            .subtitle.subtitle--blue Taste Excellence: Crafting Delightful Moments with the Finest Ingredients
+            .benefit__text 
+              p Our commitment to excellence is reflected in our use of only the finest ingredients to ensure an exceptional taste experience.
+              ul 
+                li 
+                  img(src="img/benefit/img-1.png", alt="")
+                  span We source our dairy milk from grass-fed cattle, without any artificial sweeteners or corn syrups
+                li 
+                  img(src="img/benefit/img-2.png", alt="")
+                  span We use natural Madagascar Vanilla Beans, ensuring the finest quality in every bite
+        .benefit__img 
+          img(src="img/benefit.jpg", alt="")
+        .benefit__arrow 
+          img(src="img/arrow.svg", alt="")
+      // /benefit
+
+    include core/footer.pug
