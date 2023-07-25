@@ -64,6 +64,67 @@ window.onload = function () {
   // dropBlock($('.js-drop-btn'));
   // dropBlock($('.js-drop-menu'), true);
 
+  // Паралакс относительно курсора мыши
+	function parallaxMove(parallax) {
+		if (parallax.length) {
+			parallax.each(function () {
+				var $window = $(window),
+					$this = $(this),
+					direction = $this.data('direction'),
+					intensity = $this.data('intensity'),
+					speed = $this.data('speed'),
+					revers = $this.data('revers');
+				if (!direction) {
+					direction = 'xy';
+				}
+				if (!intensity) {
+					intensity = 3;
+				}
+				if (!speed) {
+					speed = 100;
+				}
+				if (!revers) {
+					revers = false;
+				}
+				$this.css({ transition: (speed / 1000) + 's' });
+				$window.mousemove(function (event) {
+					var left = event.clientX,
+						top = event.clientY,
+						windowWidth = $window.width(),
+						windowHeight = $window.height();
+					if (revers) {
+						moveX = ((left - windowWidth / 2) * intensity / 100 * -1).toFixed(),
+							moveY = ((top - windowHeight / 2) * intensity / 100 * -1).toFixed();
+					} else {
+						moveX = ((left - windowWidth / 2) * intensity / 100).toFixed(),
+							moveY = ((top - windowHeight / 2) * intensity / 100).toFixed();
+					}
+					inVisible($this);
+					function inVisible(element) {
+						var topScroll = $(document).scrollTop(),
+							screenHeight = $(window).height(),
+							bottomScroll = topScroll + screenHeight,
+							elementHeight = element.height(),
+							elementTop = element.offset().top,
+							elementBottom = elementTop + elementHeight;
+						if (elementTop < bottomScroll && elementBottom > topScroll) {
+							if (direction == 'xy') {
+								$this.css({ transform: 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)' });
+							}
+							else if (direction == 'x') {
+								$this.css({ transform: 'translateX(' + moveX + 'px)' });
+							}
+							else if (direction == 'y') {
+								$this.css({ transform: 'translateY(' + moveY + 'px)' });
+							}
+						}
+					};
+				});
+			});
+		}
+	};
+	parallaxMove($('.js-parallaxMouse'));
+
   // // Swiper | Слайдер
   // if ($('#swiper').length) {
   //   const swiper = new Swiper('#swiper', {
@@ -98,6 +159,17 @@ window.onload = function () {
         prevEl: '.welcome-slider__arrow--prev',
         nextEl: '.welcome-slider__arrow--next',
       },
+    });
+  }
+
+  // Swiper | Слайдер
+  if ($('#sliderProduct').length) {
+    const sliderProduct = new Swiper('#sliderProduct', {
+      slidesPerView: 3,
+      spaceBetween: 15,
+      loopedSlides: 4,
+      threshold: 3,
+      loop: true,
     });
   }
 

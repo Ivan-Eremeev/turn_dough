@@ -2,7 +2,6 @@
 .benefit { 
   color: #fff;
   position: relative;
-  overflow: hidden;
   &:before {
     content: '';
     display: block;
@@ -67,13 +66,33 @@
     }
   }
   &__arrow {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
+    cursor: pointer;
+    user-select: none;
     img {
       width: 14em;
+      transition: 0.5s;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        img {
+          transform: rotate(360deg) scale(1.05);
+        }
+      }
+    }
+  }
+  &__fly {
+    position: absolute;
+    top: -3em;
+    left: 12em;
+    z-index: 1;
+    img {
+      width: 11em;
     }
   }
 }

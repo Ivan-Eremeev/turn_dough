@@ -29,7 +29,7 @@ block content
                     .title Turning Dough into Delicious Moments: 
                       span Discover the Joy of Chimney Cakes with TurnDough
                   .welcome-slider__img 
-                    img(src="img/welcome-slider/img-1.png", alt="")
+                    img(src="img/welcome-slider/img-1.png", alt="").js-parallaxMouse
 
               .swiper-slide 
                 .wrapper 
@@ -37,7 +37,7 @@ block content
                     .title Discover <br>the Timeless <br>Delight
                     .welcome-slider__text It all began in the 18th century <br>when Trdelník, a delectable <br>European masterpiece, made <br>its grand entrance.
                   .welcome-slider__img 
-                    img(src="img/welcome-slider/img-2.png", alt="")
+                    img(src="img/welcome-slider/img-2.png", alt="").js-parallaxMouse
 
               .swiper-slide 
                 .wrapper 
@@ -45,7 +45,7 @@ block content
                     .title Cherished <br>Delight
                     .welcome-slider__text Central European families cherished <br>this heavenly dessert, reserving it for <br>magical moments.
                   .welcome-slider__img 
-                    img(src="img/welcome-slider/img-3.png", alt="")
+                    img(src="img/welcome-slider/img-3.png", alt="").js-parallaxMouse
 
               .swiper-slide 
                 .wrapper 
@@ -53,7 +53,7 @@ block content
                     .title From Cobblestones <br>to California Dreams
                     .welcome-slider__text Fast forward to 2017 when David, a Prague native, <br>waved goodbye to the cobblestone streets and <br>embarked on an adventure to sunny Los Angeles.
                   .welcome-slider__img 
-                    img(src="img/welcome-slider/img-4.png", alt="")
+                    img(src="img/welcome-slider/img-4.png", alt="").js-parallaxMouse
               
               .swiper-slide 
                 .wrapper 
@@ -61,7 +61,7 @@ block content
                     .title Passion Turned <br>Success
                     .welcome-slider__text Armed with his passion for sweet delights, he established <br>the renowned company known as Turn Dough, sprinkling <br>joy across the American desert landscape.
                   .welcome-slider__img 
-                    img(src="img/welcome-slider/img-5.png", alt="")
+                    img(src="img/welcome-slider/img-5.png", alt="").js-parallaxMouse
       // /welcome-slider
 
       // benefit
@@ -82,6 +82,43 @@ block content
           img(src="img/benefit.jpg", alt="")
         .benefit__arrow 
           img(src="img/arrow.svg", alt="")
+        .benefit__fly 
+          img(src="img/flying/img-1.svg", alt="").js-parallaxMouse(data-revers="true")
       // /benefit
+
+      // products-slider
+      .products-slider
+        .products-slider__fly-1
+          img(src="img/flying/img-2.svg", alt="").js-parallaxMouse(data-revers="true")
+        .products-slider__fly-2
+          img(src="img/flying/img-3.svg", alt="").js-parallaxMouse
+        .products-slider__block 
+          .wrapper 
+            .title 18 Irresistible Chimney Cakes: <br>A Scrumptious Journey of Flavors!
+            .products-slider__sub Today, we proudly offer 18 signature Chimney cakes with Soft Serve Gelato, <br>allowing you to indulge in a variety of delectable combinations.
+            .products-slider__slider 
+              #sliderProduct 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    mixin product-slier-card()
+                      .products-slider__card 
+                        .products-slider__img 
+                          img(src="img/products/img-1.jpg", alt="")
+                        .products-slider__title Oreo Chimney Cake
+                        .products-slider__text Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures.
+                        .products-slider__btn 
+                          a(href="#") more
+                    +product-slier-card
+                  .swiper-slide 
+                    +product-slier-card
+                  .swiper-slide 
+                    +product-slier-card
+                  .swiper-slide 
+                    +product-slier-card
+                  .swiper-slide 
+                    +product-slier-card
+                  .swiper-slide 
+                    +product-slier-card
+      // /products-slider
 
     include core/footer.pug

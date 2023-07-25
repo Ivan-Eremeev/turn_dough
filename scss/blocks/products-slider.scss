@@ -1,0 +1,80 @@
+/* products-slider */
+.products-slider { 
+  padding: 11.25em 0 10.7em;
+  text-align: center;
+  position: relative;
+  &__block {
+    overflow: hidden;
+  }
+  .title {
+    width: 13em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.6em;
+  }
+  &__sub {
+    width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125em;
+    line-height: 140%;
+    margin-bottom: 4.3em;
+  }
+  &__slider {
+    user-select: none;
+  }
+  &__block {
+    
+  }
+  &__img {
+    display: flex;
+    align-items: flex-end;
+    height: 31.8em;
+    border-radius: 2.5em;
+    background-color: #EC0087;
+    margin-bottom: 1.8em;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 100%;
+    }
+  }
+  &__title {
+    font-family: "Kelpo";
+    font-size: 2.75em;
+    line-height: 160%;
+    letter-spacing: -0.88px;
+    color: $primary_color;
+  }
+  &__text {
+    width: 24em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 140%;
+    margin-bottom: 0.7em;
+  }
+  &__btn {
+    font-family: "Kelpo";
+    font-size: 1.75em;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+    a {
+      color: $secondary_color;
+      text-decoration: underline;
+    } 
+  }
+  &__fly-1 {
+    position: absolute;
+    top: -4em;
+    right: 35.5em;
+    z-index: 1;
+  }
+  &__fly-2 {
+    position: absolute;
+    top: 8.5em;
+    left: 8.8em;
+    z-index: 1;
+  }
+}
+/* /products-slider */
