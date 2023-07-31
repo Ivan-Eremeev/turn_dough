@@ -124,11 +124,11 @@ block content
       // besides
       .besides
         .besides__fly-1
-          img(src="img/flying/img-4.svg", alt="")
+          img(src="img/flying/img-4.svg", alt="").js-parallaxMouse(data-revers="true")
         .besides__fly-2
-          img(src="img/flying/img-5.svg", alt="")
+          img(src="img/flying/img-5.svg", alt="").js-parallaxMouse
         .besides__fly-3
-          img(src="img/flying/img-3.svg", alt="")
+          img(src="img/flying/img-3.svg", alt="").js-parallaxMouse(data-revers="true")
         .wrapper 
           .subtitle.subtitle--pink Delicious Delights: Beyond Chimney Cakes, Explore Our Tempting Treats
           .besides__text Alongside our mouthwatering Chimney Cakes, we offer a tantalizing array of indulgences, including
@@ -148,5 +148,19 @@ block content
             img(src="img/besides/img-5.png", alt="")
             span delightful selection <br>of espresso
       // /besides
+
+      // more-offer
+      .more-offer
+        .more-offer__fly-1
+          img(src="img/flying/img-6.svg", alt="").js-parallaxMouse(data-revers="true")
+        .more-offer__fly-2
+          img(src="img/flying/img-7.svg", alt="").js-parallaxMouse(data-revers="true")
+        .wrapper 
+          .more-offer__content 
+            .subtitle.subtitle--blue Indulge in the Tropical Delight: Discover the Irresistible Bliss of Our Dole Whip!
+            .more-offer__text Introducing our delightful Dole Whip: a tropical treat that will transport your taste buds to paradise! Made from the finest ripe pineapples, this refreshing frozen dessert is the perfect way to beat the heat and indulge in a burst of tropical flavors.
+          .more-offer__img 
+            img(src="img/more-offer.png", alt="")
+      // /more-offer
 
     include core/footer.pug

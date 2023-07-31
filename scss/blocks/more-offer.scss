@@ -1,0 +1,48 @@
+/* more-offer */
+.more-offer { 
+  height: 47.5625em;
+  background-color: #EC0087;
+  position: relative;
+  &__content {
+    width: 40%;
+    margin-left: auto;
+    padding: 13em 0 9em;
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 2.5em;
+    img {
+      display: block;
+      width: 54em;
+    }
+  }
+  .subtitle {
+    margin-bottom: 0.5em;
+  }
+  &__text {
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 140%;
+    color: #fff;
+  }
+  &__fly-1 {
+    position: absolute;
+    top: -2.5em;
+    right: 43.5em;
+    z-index: 1;
+    img {
+      width: 8em;
+    }
+  }
+  &__fly-2 {
+    position: absolute;
+    bottom: 5em;
+    right: 7em;
+    z-index: 1;
+    img {
+      width: 4em;
+    }
+  }
+}
+/* /more-offer */
