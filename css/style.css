@@ -227,14 +227,22 @@ body.lock {
   padding: 200px 0 100px;
 }
 .navpage h1 {
-  font-size: 24px;
+  font-size: 2em;
+  line-height: 120%;
+  color: #EC0187;
   margin-bottom: 20px;
 }
 .navpage ul {
-  font-size: 18px;
+  font-size: 1.2em;
 }
 .navpage ul li {
   margin: 10px 0;
+}
+.navpage ul li a {
+  color: #AE909D;
+}
+.navpage ul li a:hover {
+  color: #99DDE3;
 }
 
 /* /settings */
@@ -292,10 +300,15 @@ body.lock {
   font-family: "Kelpo";
   font-size: 4em;
   line-height: 86%;
+  letter-spacing: -0.03em;
 }
 .subtitle--blue {
   color: #99DDE3;
   text-shadow: -0.1em 0.1em #5C2D95;
+}
+.subtitle--pink {
+  color: #EC0187;
+  text-shadow: -0.1em 0.1em #fff;
 }
 
 /* /subtitle */
@@ -490,7 +503,7 @@ body.lock {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 5em 0;
-  width: 38em;
+  width: 36em;
   min-height: 49em;
 }
 .benefit__content .subtitle {
@@ -608,12 +621,22 @@ body.lock {
   border-radius: 2.5em;
   background-color: #EC0087;
   margin-bottom: 1.8em;
+  overflow: hidden;
 }
 .products-slider__img img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (min-width: 769px) {
+  .products-slider__img:hover img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
 .products-slider__title {
   font-family: "Kelpo";
@@ -621,6 +644,11 @@ body.lock {
   line-height: 160%;
   letter-spacing: -0.88px;
   color: #EC0187;
+}
+@media (min-width: 769px) {
+  .products-slider__title:hover {
+    color: #99DDE3;
+  }
 }
 .products-slider__text {
   width: 24em;
@@ -639,11 +667,19 @@ body.lock {
   color: #99DDE3;
   text-decoration: underline;
 }
+@media (min-width: 769px) {
+  .products-slider__btn a:hover {
+    color: #EC0187;
+  }
+}
 .products-slider__fly-1 {
   position: absolute;
   top: -4em;
   right: 35.5em;
   z-index: 1;
+}
+.products-slider__fly-1 img {
+  width: 10em;
 }
 .products-slider__fly-2 {
   position: absolute;
@@ -651,7 +687,102 @@ body.lock {
   left: 8.8em;
   z-index: 1;
 }
+.products-slider__fly-2 img {
+  width: 4em;
+}
 
 /* /products-slider */
+/* besides */
+.besides {
+  min-height: 50.6875em;
+  padding: 9.5em 0;
+  background-color: #FCD9EE;
+  position: relative;
+}
+.besides .wrapper {
+  position: relative;
+}
+.besides .subtitle {
+  width: 11em;
+  margin-bottom: 0.3em;
+}
+.besides__text {
+  width: 23em;
+  font-size: 1.125em;
+  line-height: 140%;
+  margin-bottom: 3.5em;
+}
+.besides__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Kelpo";
+  font-size: 2em;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: #EC0187;
+}
+.besides__item img {
+  width: 5.5em;
+  margin-top: -1em;
+  margin-right: 0.5em;
+}
+@media (min-width: 769px) {
+  .besides__item--0 {
+    margin-left: -1em;
+  }
+  .besides__item--1 {
+    position: absolute;
+    top: -1.5em;
+    right: 8.3em;
+  }
+  .besides__item--2 {
+    position: absolute;
+    top: 5em;
+    right: 0.5em;
+  }
+  .besides__item--3 {
+    position: absolute;
+    top: 11.1em;
+    right: 8.5em;
+  }
+  .besides__item--4 {
+    position: absolute;
+    top: 5em;
+    right: 15em;
+  }
+}
+.besides__fly-1 {
+  position: absolute;
+  top: -1em;
+  left: 9.5em;
+  z-index: 1;
+}
+.besides__fly-1 img {
+  width: 1.5em;
+}
+.besides__fly-2 {
+  position: absolute;
+  top: -4.5em;
+  right: 51em;
+  z-index: 1;
+}
+.besides__fly-2 img {
+  width: 6em;
+}
+.besides__fly-3 {
+  position: absolute;
+  top: 8em;
+  right: 4em;
+  z-index: 1;
+}
+.besides__fly-3 img {
+  width: 4em;
+}
+
+/* /besides */
 /* footer */
 /* /footer */

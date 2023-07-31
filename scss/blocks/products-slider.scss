@@ -33,11 +33,20 @@
     border-radius: 2.5em;
     background-color: #EC0087;
     margin-bottom: 1.8em;
+    overflow: hidden;
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       max-height: 100%;
+      transition: .3s;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
     }
   }
   &__title {
@@ -46,6 +55,11 @@
     line-height: 160%;
     letter-spacing: -0.88px;
     color: $primary_color;
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        color: $secondary_color;
+      }
+    }
   }
   &__text {
     width: 24em;
@@ -62,6 +76,11 @@
     a {
       color: $secondary_color;
       text-decoration: underline;
+      @media (min-width: $break_sm + 1) {
+        &:hover {
+          color: $primary_color;
+        }
+      }
     } 
   }
   &__fly-1 {
@@ -69,12 +88,18 @@
     top: -4em;
     right: 35.5em;
     z-index: 1;
+    img {
+      width: 10em;
+    }
   }
   &__fly-2 {
     position: absolute;
     top: 8.5em;
     left: 8.8em;
     z-index: 1;
+    img {
+      width: 4em;
+    }
   }
 }
 /* /products-slider */

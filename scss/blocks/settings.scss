@@ -71,13 +71,21 @@ body {
 .navpage {
   padding: 200px 0 100px;
   h1 {
-    font-size: 24px;
+    font-size: 2em;
+    line-height: 120%;
+    color: $primary_color;
     margin-bottom: 20px;
   }
   ul {
-    font-size: 18px;
+    font-size: 1.2em;
     li {
       margin: 10px 0;
+      a {
+        color: $text_color;
+        &:hover {
+          color: $secondary_color;
+        }
+      }
     }
   }
 }

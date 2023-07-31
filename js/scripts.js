@@ -147,7 +147,7 @@ window.onload = function () {
   //   });
   // }
 
-  // Swiper | Слайдер
+  // Swiper | Слайдер 
   if ($('#sliderWelcolme').length) {
     const sliderWelcolme = new Swiper('#sliderWelcolme', {
       slidesPerView: 1,
@@ -162,7 +162,7 @@ window.onload = function () {
     });
   }
 
-  // Swiper | Слайдер
+  // Swiper | Слайдер 
   if ($('#sliderProduct').length) {
     const sliderProduct = new Swiper('#sliderProduct', {
       slidesPerView: 3,
