@@ -16,5 +16,8 @@
     color: #FFF1F7;
     text-shadow: -0.1em 0.1em #EC0187;
   }
+  @media (max-width: $break_sm) {
+    font-size: 2.7em;
+  }
 }
 /* /subtitle */

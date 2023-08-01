@@ -80,5 +80,25 @@
       }
     }
   }
+  @media (max-width: $break_sm) {
+    padding-top: 5.5em;
+    &__arrow {
+      top: auto;
+      bottom: 5em;
+      img {
+        width: 5em;
+      }
+    }
+    &__img {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      position: static;
+    }
+    &__content {
+      width: 100%;
+      padding: 4em 0 1em;
+    }
+  }
 }
 /* /welcome-slider */

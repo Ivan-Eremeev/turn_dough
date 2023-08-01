@@ -1,6 +1,6 @@
 window.onload = function () {
 
-  // Липкое меню.
+  // Stiky menu.
   function stikyMenu(header) {
     let headerTop = header.offset().top;
     headerToggleClass();
@@ -64,7 +64,7 @@ window.onload = function () {
   // dropBlock($('.js-drop-btn'));
   // dropBlock($('.js-drop-menu'), true);
 
-  // Паралакс относительно курсора мыши
+  // Parralax mouse
 	function parallaxMove(parallax) {
 		if (parallax.length) {
 			parallax.each(function () {
@@ -147,7 +147,7 @@ window.onload = function () {
   //   });
   // }
 
-  // Swiper | Слайдер 
+  // Swiper
   if ($('#sliderWelcolme').length) {
     const sliderWelcolme = new Swiper('#sliderWelcolme', {
       slidesPerView: 1,
@@ -162,39 +162,45 @@ window.onload = function () {
     });
   }
 
-  // Swiper | Слайдер 
+  // Swiper
   if ($('#sliderProduct').length) {
     const sliderProduct = new Swiper('#sliderProduct', {
-      slidesPerView: 3,
+      slidesPerView: 1.2,
       spaceBetween: 10,
       loopedSlides: 4,
       threshold: 3,
       loop: true,
+      centeredSlides: true,
       breakpoints: {
         1050: {
+          slidesPerView: 3,
           spaceBetween: 15,
+          centeredSlides: false,
         },
       }
     });
   }
 
-  // Swiper | Слайдер 
+  // Swiper
   if ($('#sliderInstagram').length) {
     const sliderInstagram = new Swiper('#sliderInstagram', {
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       spaceBetween: 10,
       loopedSlides: 5,
       threshold: 3,
       loop: true,
+      centeredSlides: true,
       breakpoints: {
         1050: {
+          slidesPerView: 4,
           spaceBetween: 20,
+          centeredSlides: false,
         },
       }
     });
   }
 
-  // // Swiper | Слайдер (множество одинаковых слайдеров)
+  // // Swiper(множество одинаковых слайдеров)
   // if ($('.js-slider-wrapper').length) {
   //   const Swipers = Array.from(document.querySelectorAll('.js-slider-wrapper'), n => {
   //     const Slider = new Swiper(n.querySelector('.js-slider'), {
@@ -484,5 +490,16 @@ window.onload = function () {
   //   });
   // };
   // countNumber($(".count-number"));
+
+  // Map
+  let map;
+
+  function initMap() {
+    map = new Map(document.getElementById('map'), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8
+    });
+  }
+  initMap();
 
 }

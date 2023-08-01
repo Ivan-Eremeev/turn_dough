@@ -86,5 +86,32 @@
       width: 4em;
     }
   }
+  @media (max-width: $break_sm) {
+    padding: 5em 0;
+    .subtitle {
+      width: 100%;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__item {
+      font-size: 1.5em;
+      img {
+        width: 4.5em;
+      }
+    }
+    &__fly-1 {
+      display: none;
+    }
+    &__fly-2 {
+      right: 8em;
+      img {
+        width: 5em;
+      }
+    }
+    &__fly-3 {
+      display: none;
+    }
+  }
 }
 /* /besides */

@@ -23,6 +23,7 @@
     margin-bottom: 1.25em;
   }
   &__buttons {
+    display: flex;
     margin-left: -1.6875em;
     margin-bottom: 1.1em;
   }
@@ -47,6 +48,13 @@
       font-family: "Kelpo";
       font-size: 1.625em;
       line-height: 100%;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        .contact__btn-icon {
+          fill: $secondary_color;
+        }
+      }
     }
     &.active {
       background-color: #FFF5FA;
@@ -92,6 +100,30 @@
     right: 3em;
     img {
       width: 13em;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 5em 0 4em;
+    &__map {
+      position: static;
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      margin-bottom: 3em;
+    }
+    &__buttons {
+      flex-wrap: wrap;
+    }
+    &__btn {
+      max-width: none;
+      margin-bottom: 1em;
+    }
+    &__fly {
+      top: -4em;
+      img {
+        width: 7em;
+      }
     }
   }
 }

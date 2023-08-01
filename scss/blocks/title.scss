@@ -7,5 +7,8 @@
   span {
     color: $secondary_color;
   }
+  @media (max-width: $break_sm) {
+    font-size: 3.2em;
+  }
 }
 /* /title */

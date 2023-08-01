@@ -101,5 +101,30 @@
       width: 4em;
     }
   }
+  @media (max-width: $break_sm) {
+    padding: 6em 0 5em;
+    .title {
+      width: 100%;
+    }
+    &__sub {
+      width: 100%;
+      margin-bottom: 3em;
+    }
+    &__img {
+      height: 22em;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__fly-1 {
+      right: 0em;
+      img {
+        width: 8em;
+      }
+    }
+    &__fly-2 {
+      display: none;
+    }
+  }
 }
 /* /products-slider */
