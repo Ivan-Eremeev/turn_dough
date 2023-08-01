@@ -194,19 +194,33 @@ block content
 
       // contact
       .contact
+        .contact__fly 
+          img(src="img/flying/img-9.svg", alt="")
         .contact__map 
-        .contact__content 
-          .wrapper 
-            .subtitle.subtitle--white 
-            .contact__sub 
+        .wrapper 
+          .contact__content 
+            .subtitle.subtitle--white Where Iconic Locations Meet Delicious Delights
+            .contact__sub Our stores are perfectly situated in two iconic and vibrant locations: the sun-kissed Venice Boardwalk and the world-famous Hollywood Walk of Fame.
             .contact__buttons 
+              a(href="#").contact__btn.active
+                .contact__btn-icon 
+                  svg(class="icon-point")
+                    use(xlink:href="img/sprite.svg#point")
+                span Hollywood
               a(href="#").contact__btn 
                 .contact__btn-icon 
-                  img(src="img/", alt="")
-                span 
+                  svg(class="icon-point")
+                    use(xlink:href="img/sprite.svg#point")
+                span Venice
             .contact__text 
-              h3 
-              p 
+              h3 Turn Dough
+              p 1425 Ocean Front Walk, Ocean Front Walk, Venice, California 90291, United States
+            .contact__text 
+              h3 Contact information
+              p Promotional: marketing@turndough.com General: info@turndough.com Phone Number: (424) 307-5005
+            .contact__text 
+              h3 Hours
+              p Open 7 Days a Week from noon until sellout
       // /contact
 
     include core/footer.pug
