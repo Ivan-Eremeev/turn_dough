@@ -90,6 +90,11 @@ h1, h2, h3 {
 html {
   font-size: 0.85vw;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 3vw;
+  }
+}
 
 a {
   -webkit-transition: 0.1s;
@@ -174,6 +179,11 @@ body.lock {
 @media screen and (max-width: 768px) {
   .wrapper {
     padding-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100% !important;
   }
 }
 
@@ -1003,4 +1013,108 @@ body.lock {
 
 /* /contact */
 /* footer */
+.footer {
+  padding: 4.2em 0;
+  background-color: #FABFE2;
+  position: relative;
+}
+.footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.footer__text {
+  font-weight: 500;
+  color: #EC0187;
+}
+.footer__social {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.footer__social-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -0.625em;
+  margin-top: -0.625em;
+}
+.footer__social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 4.8125em;
+  height: 4.8125em;
+  margin-left: 0.625em;
+  margin-top: 0.625em;
+  background-color: #fff;
+  border: 0.125em solid #EC0187;
+  border-radius: 100%;
+  fill: #EC0187;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer__social-icon svg {
+  width: 2em;
+  height: 2em;
+}
+@media (min-width: 769px) {
+  .footer__social-icon:hover {
+    fill: #fff;
+    background-color: #EC0187;
+  }
+}
+.footer__fly {
+  position: absolute;
+  top: -3em;
+  right: 41em;
+}
+.footer__fly img {
+  width: 5em;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 2em 0 1.5em;
+  }
+  .footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .footer__social {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 1em;
+  }
+  .footer__text {
+    margin-bottom: 1em;
+  }
+}
+
 /* /footer */

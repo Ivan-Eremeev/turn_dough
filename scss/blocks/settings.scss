@@ -1,6 +1,9 @@
 /* settings */
 html {
   font-size: 0.85vw;
+  @media (max-width: $break_sm) {
+    font-size: 3vw;
+  }
 }
 a {
   transition: .1s;
@@ -52,6 +55,9 @@ body {
   width: 77% !important;
   max-width: none !important;
   @include wrapper();
+  @media (max-width: $break_sm) {
+    width: 100% !important;
+  }
 }
 *:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
