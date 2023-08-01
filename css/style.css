@@ -833,5 +833,59 @@ body.lock {
 }
 
 /* /more-offer */
+/* instagram */
+.instagram {
+  padding: 10em 0 10em;
+  position: relative;
+}
+.instagram__container {
+  overflow: hidden;
+}
+.instagram .subtitle {
+  width: 9em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+.instagram__slider {
+  margin-bottom: 3.3em;
+}
+.instagram__link {
+  font-family: "Kelpo";
+  font-size: 1.75em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 251%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.instagram__link a {
+  text-decoration-line: underline;
+  color: #99DDE3;
+}
+@media (min-width: 769px) {
+  .instagram__link a:hover {
+    color: #EC0187;
+  }
+}
+.instagram__fly {
+  position: absolute;
+  top: -7em;
+  left: 4em;
+}
+.instagram__fly img {
+  width: 8em;
+}
+.instagram__img {
+  display: block;
+  height: 21em;
+}
+.instagram__img img {
+  height: 100%;
+}
+
+/* /instagram */
 /* footer */
 /* /footer */

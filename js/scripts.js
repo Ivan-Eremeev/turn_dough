@@ -166,10 +166,31 @@ window.onload = function () {
   if ($('#sliderProduct').length) {
     const sliderProduct = new Swiper('#sliderProduct', {
       slidesPerView: 3,
-      spaceBetween: 15,
+      spaceBetween: 10,
       loopedSlides: 4,
       threshold: 3,
       loop: true,
+      breakpoints: {
+        1050: {
+          spaceBetween: 15,
+        },
+      }
+    });
+  }
+
+  // Swiper | Слайдер 
+  if ($('#sliderInstagram').length) {
+    const sliderInstagram = new Swiper('#sliderInstagram', {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      loopedSlides: 5,
+      threshold: 3,
+      loop: true,
+      breakpoints: {
+        1050: {
+          spaceBetween: 20,
+        },
+      }
     });
   }
 

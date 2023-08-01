@@ -1,0 +1,53 @@
+/* instagram */
+.instagram { 
+  padding: 10em 0 10em;
+  position: relative;
+  &__container {
+    overflow: hidden;
+  }
+  .subtitle {
+    width: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1.25em;
+  }
+  &__slider {
+    margin-bottom: 3.3em;
+  }
+  &__link {
+    font-family: "Kelpo";
+    font-size: 1.75em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 251%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+      text-decoration-line: underline;
+      color: $secondary_color;
+      @media (min-width: $break_sm + 1) {
+        &:hover {
+          color: $primary_color;
+        }
+      }
+    }
+  }
+  &__fly {
+    position: absolute;
+    top: -7em;
+    left: 4em;
+    img {
+      width: 8em;
+    }
+  }
+  &__img {
+    display: block;
+    height: 21em;
+    img {
+      height: 100%;
+    }
+  }
+}
+/* /instagram */
