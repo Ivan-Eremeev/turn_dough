@@ -510,10 +510,10 @@ body.lock {
   }
   .welcome-slider__arrow {
     top: auto;
-    bottom: 5em;
+    bottom: 1em;
   }
   .welcome-slider__arrow img {
-    width: 5em;
+    width: 4em;
   }
   .welcome-slider__img {
     width: 80%;
