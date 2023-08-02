@@ -17,6 +17,20 @@ window.onload = function () {
   };
   stikyMenu($('#headerSticky'));
 
+  // Scroll to ID
+	function menuScroll(menuItem) {
+		menuItem.find('a[href^="#"]').click( function(){
+			var scroll_el = $(this).attr('href'),
+					time = 500;
+			if ($(scroll_el).length != 0) {
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, time);
+				$(this).addClass('active');
+			}
+			return false;
+		});
+	};
+	menuScroll($('.js-scroll-to'));
+
   // // Выпадайки при клике по кнопке
   // // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
   // // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
@@ -494,12 +508,16 @@ window.onload = function () {
   // Map
   let map;
 
-  function initMap() {
-    map = new Map(document.getElementById('map'), {
+  async function initMap() {
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+
+    map = new Map(document.getElementById("map"), {
       center: { lat: -34.397, lng: 150.644 },
-      zoom: 8
+      zoom: 8,
     });
   }
+
   initMap();
 
 }

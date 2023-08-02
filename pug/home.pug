@@ -80,8 +80,9 @@ block content
                   span We use natural Madagascar Vanilla Beans, ensuring the finest quality in every bite
         .benefit__img 
           img(src="img/benefit.jpg", alt="")
-        .benefit__arrow 
-          img(src="img/arrow.svg", alt="")
+        .benefit__arrow.js-scroll-to
+          a(href="#instagram") 
+            img(src="img/arrow.svg", alt="")
         .benefit__fly 
           img(src="img/flying/img-1.svg", alt="").js-parallaxMouse(data-revers="true")
       // /benefit
@@ -164,7 +165,7 @@ block content
       // /more-offer
 
       // instagram
-      .instagram
+      .instagram#instagram
         .instagram__fly 
             img(src="img/flying/img-8.svg", alt="").js-parallaxMouse
         .instagram__container 
@@ -221,7 +222,7 @@ block content
               h3 Hours
               p Open 7 Days a Week from noon until sellout
         .contact__map 
-          #map
+          #map 
       // /contact
 
     include core/footer.pug
