@@ -513,8 +513,8 @@ window.onload = function () {
     const { Map } = await google.maps.importLibrary("maps");
 
     map = new Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
+      center: { lat: 33.984577345655985, lng: -118.46422749999999 },
+      zoom: 15,
     });
   }
 

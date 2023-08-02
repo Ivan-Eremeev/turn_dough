@@ -625,7 +625,7 @@ body.lock {
   z-index: 1;
 }
 .benefit__fly img {
-  width: 11em;
+  width: 6em;
 }
 @media (max-width: 768px) {
   .benefit__img {
@@ -648,7 +648,7 @@ body.lock {
     width: 8em;
   }
   .benefit__fly img {
-    width: 8em;
+    width: 4em;
   }
 }
 
@@ -751,7 +751,7 @@ body.lock {
   z-index: 1;
 }
 .products-slider__fly-1 img {
-  width: 10em;
+  width: 9em;
 }
 .products-slider__fly-2 {
   position: absolute;
@@ -780,10 +780,11 @@ body.lock {
     width: 100%;
   }
   .products-slider__fly-1 {
-    right: 0em;
+    top: -2em;
+    right: 2em;
   }
   .products-slider__fly-1 img {
-    width: 8em;
+    width: 5em;
   }
   .products-slider__fly-2 {
     display: none;
@@ -861,7 +862,7 @@ body.lock {
   z-index: 1;
 }
 .besides__fly-1 img {
-  width: 1.5em;
+  width: 3em;
 }
 .besides__fly-2 {
   position: absolute;
@@ -870,7 +871,7 @@ body.lock {
   z-index: 1;
 }
 .besides__fly-2 img {
-  width: 6em;
+  width: 12em;
 }
 .besides__fly-3 {
   position: absolute;
@@ -901,10 +902,11 @@ body.lock {
     display: none;
   }
   .besides__fly-2 {
+    top: -2.5em;
     right: 8em;
   }
   .besides__fly-2 img {
-    width: 5em;
+    width: 8em;
   }
   .besides__fly-3 {
     display: none;
@@ -975,7 +977,7 @@ body.lock {
     right: 7em;
   }
   .more-offer__fly-1 img {
-    width: 6em;
+    width: 5em;
   }
   .more-offer__fly-2 {
     display: none;
@@ -1022,11 +1024,11 @@ body.lock {
 }
 .instagram__fly {
   position: absolute;
-  top: -7em;
+  top: -4em;
   left: 4em;
 }
 .instagram__fly img {
-  width: 8em;
+  width: 6em;
 }
 .instagram__img {
   display: block;
@@ -1049,11 +1051,11 @@ body.lock {
     height: 19em;
   }
   .instagram__fly {
-    left: 9em;
-    top: -4em;
+    left: 8em;
+    top: -2em;
   }
   .instagram__fly img {
-    width: 6em;
+    width: 4em;
   }
 }
 
@@ -1070,6 +1072,10 @@ body.lock {
   bottom: 0;
   left: 0;
   width: 50%;
+}
+.contact__map #map {
+  height: 100%;
+  min-height: 20em;
 }
 .contact__content {
   width: 30em;
@@ -1169,11 +1175,11 @@ body.lock {
 }
 .contact__fly {
   position: absolute;
-  top: -8em;
+  top: -5em;
   right: 3em;
 }
 .contact__fly img {
-  width: 13em;
+  width: 10em;
 }
 @media (max-width: 768px) {
   .contact {
@@ -1196,10 +1202,10 @@ body.lock {
     margin-bottom: 1em;
   }
   .contact__fly {
-    top: -4em;
+    top: -3em;
   }
   .contact__fly img {
-    width: 7em;
+    width: 6em;
   }
 }
 
@@ -1279,7 +1285,7 @@ body.lock {
   right: 41em;
 }
 .footer__fly img {
-  width: 5em;
+  width: 4em;
 }
 @media (max-width: 768px) {
   .footer {
@@ -1315,6 +1321,12 @@ body.lock {
   .footer__social-icon svg {
     width: 1.5em;
     height: 1.5em;
+  }
+  .footer__fly {
+    right: 15em;
+  }
+  .footer__fly img {
+    width: 3em;
   }
 }
 

@@ -65,7 +65,7 @@
     left: 9.5em;
     z-index: 1;
     img {
-      width: 1.5em;
+      width: 3em;
     }
   }
   &__fly-2 {
@@ -74,7 +74,7 @@
     right: 51em;
     z-index: 1;
     img {
-      width: 6em;
+      width: 12em;
     }
   }
   &__fly-3 {
@@ -104,9 +104,10 @@
       display: none;
     }
     &__fly-2 {
+      top: -2.5em;
       right: 8em;
       img {
-        width: 5em;
+        width: 8em;
       }
     }
     &__fly-3 {
