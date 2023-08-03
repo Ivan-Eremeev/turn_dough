@@ -95,4 +95,10 @@ body {
     }
   }
 }
+.menue {
+  padding-top: 9.5em;
+  @media (max-width: $break_sm) {
+    padding-top: 7em;
+  }
+}
 /* /settings */

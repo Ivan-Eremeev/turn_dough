@@ -1,11 +1,15 @@
-// header
-header#headerSticky.header
-  .wrapper 
-    .header__btn 
-      a(href="about.html").btn 
-        span Our story
-    a(href="#").header__logo
-      img(src="img/logo.svg", alt="")
-    .header__btn 
-      a(href="menu.html").btn Our menu
-//	/header
+mixin header(addClass)
+  // header
+  header#headerSticky.header(class= addClass)
+    //- if addClass 
+    //-   .header__fly 
+    //-     img(src="img/flying/img-11.png", alt="")
+    .wrapper 
+      .header__btn 
+        a(href="about.html").btn 
+          span Our story
+      a(href="#").header__logo
+        img(src="img/logo.svg", alt="")
+      .header__btn 
+        a(href="menue.html").btn Our menu
+  //	/header

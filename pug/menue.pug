@@ -1,0 +1,87 @@
+extends core/base.pug
+
+block title 
+  title Menue
+
+block content
+
+  .page 
+
+    include core/header.pug
+    +header('header--fill')
+
+    .content 
+
+      .menue 
+
+        // catalog
+        .catalog
+
+          .catalog__head 
+            .catalog__bg 
+              img(src="img/catalog-head/bg-1.jpg", alt="")
+            .wrapper 
+              .catalog__content 
+                .catalog__title Chimney Cakes
+                p Freshness is our priority at Turn Dough. Our delectable Chimney Cakes are always baked right before your eyes, ensuring the utmost freshness. Each order is carefully crafted to perfection, guaranteeing a personalized experience. Our in-house made Gelato Vanilla Bean (soft serve) is made daily with the finest ingredients. We take pride in offering GMO-Free, Gluten-Free, Egg-Free, Kosher, and Halal Soft Serve Gelato. Our Gelatois made with the goodness of Grass-Fed Cattle Dairy Milk.
+              .catalog__img 
+                img(src="img/catalog-head/img-1.png", alt="")
+
+          .catalog__cards 
+            .catalog__fly-1 
+              img(src="img/flying/img-12.png", alt="")
+            .catalog__fly-2 
+              img(src="img/flying/img-13.png", alt="")
+            .catalog__fly-3
+              img(src="img/flying/img-14.png", alt="")
+            .wrapper 
+              .row 
+                .catalog__col 
+                  mixin product-card(imgUrl, title, text)
+                    // product-card
+                    .product-card
+                      a(href="#").product-card__img 
+                        img(src= imgUrl, alt="")
+                      .product-card__content 
+                        h2
+                          a(href="#")= title
+                        p= text
+                    // /product-card
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+                .catalog__col 
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+                .catalog__col 
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+                .catalog__col 
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+                .catalog__col 
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+                .catalog__col 
+                  +product-card("img/products/img-2.jpg", "OREO CHIMNEY CAKE", "Delight in the irresistible combination of a warm, freshly baked Trdelník, generously filled with heavenly Nutella. Top it off with a generous swirl of creamy Vanilla Bean Gelato, creating a divine harmony of flavors and textures. As you take each heavenly bite, the crushed Oreo pieces add a delightful crunch, tantalizing your taste buds with every mouthful. Finally, a whole Oreo cookie sits atop this masterpiece, providing the perfect finishing touch.")
+                .catalog__col 
+                  +product-card("img/products/img-3.jpg", "BROWNIE CHIMNEY CAKE", "Here you'll discover a heavenly spread of smooth Nutella, followed by a generous serving of creamy Vanilla Bean Gelato. But that's not all! We add a delightful crunch with Walnuts and Chocolate Chip Brownies. To take it to the next level of indulgence, we drizzle it with a heavenly combination of Sea Salt Caramel and Chocolate. It's a dessert experience that will leave you craving for more.")
+                .catalog__col 
+                  +product-card("img/products/img-4.jpg", "UNICORN CHIMNEY CAKE", "As you unravel the layers, you'll be greeted with a heavenly Nutella spread. But the magic doesn't stop there. We then crown it with velvety soft-serve Vanilla Bean Gelato, infusing each bite with creamy bliss. To add a sprinkle of whimsy, we shower it with delightful Unicorn Sprinkles. And as a grand finale, a handcrafted fondant Unicorn with delicate Roses awaits, turning this dessert into a fairytale experience.")
+        // /catalog
+
+    include core/footer.pug
