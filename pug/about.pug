@@ -1,0 +1,47 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .welcome__bg 
+          img(src="img/welcome-bg.jpg", alt="")
+        .wrapper 
+          .welcome__img 
+            img(src="img/hero.png", alt="")
+      // /welcome
+
+      // story
+      .story
+        .wrapper 
+
+          .story__row.story__row--1
+            .story__col 
+              .story__text 
+                .subtitle.subtitle--pink Our Story: Unveiling the Origins of Turn Dough
+                p Picture this: a journey that began in the 18th century, where Trdelník,a delectable European masterpiece, captivated families across Central Europe. Now, fast forward to 2017 when David, a Prague native, bid farewellto the cobblestone streets and ventured to sunny Los Angeles. Fuelledby his passion for sweet delights, he established the renowned company known as Turn Dough, sprinkling joy across the American dessert landscape. 
+                p Since our grand opening on November 3, 2017, our family enterprisehas triumphed, embodying a tale of success and unwavering commitment.
+            .story__col 
+              .story__img 
+                img(src="img//welcome-slider/img-2.png", alt="")
+
+          .story__row.story__row--2 
+            .story__col 
+              .story__text 
+                .subtitle.subtitle--pink Our Mission: Introducing European Traditions with a Modern Twist
+                p David passionately recounts our mission: introducing European traditions, with a particular emphasis on the authentic Czech Made flavor, to the American consumer. We take immense pride in accomplishing this goal, as our delectable treats have delighted countless individuals nationwide. Moreover, we set ourselves the challenge of selling one million products within our first five years, and we are thrilled to announce our triumphant success. Over half a million fortunate individuals have already savored the exquisite delights that our company offers.
+            .story__col 
+              .story__img 
+                img(src="img//welcome-slider/img-7.png", alt="")
+      // /story
+
+    include core/footer.pug
