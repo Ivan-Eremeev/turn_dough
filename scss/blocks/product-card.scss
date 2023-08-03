@@ -30,6 +30,13 @@
       line-height: 136%;
       text-align: justify;
     }
+    &--blue {
+      h1,h2,h3,h4,h5,h6 {
+        a {
+          color: #83CDD8;
+        }
+      }
+    }
   }
   @media (max-width: $break_sm) {
     &__content {
