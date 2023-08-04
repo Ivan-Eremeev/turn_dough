@@ -221,7 +221,6 @@ window.onload = function () {
       spaceBetween: 10,
       loop: true,
       watchSlidesProgress: true,
-      // centerMode: true,
     });
     var slideReview = new Swiper("#slideReview", {
       slidesPerView: 1,
