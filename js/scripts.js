@@ -214,6 +214,44 @@ window.onload = function () {
     });
   }
 
+  if ($('#slideReview').length) {
+    var sliderReviewThumb = new Swiper("#sliderReviewThumb", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      watchSlidesProgress: true,
+      centerMode: true,
+    });
+    var slideReview = new Swiper("#slideReview", {
+      slidesPerView: 1,
+      spaceBetween: 150,
+      loop: true,
+      navigation: {
+        nextEl: ".review__button--next",
+        prevEl: ".review__button--prev",
+      },
+      thumbs: {
+        swiper: sliderReviewThumb,
+      },
+    });
+  }
+
+  // Line animation
+  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+  gsap.set(".pathBall", { xPercent: -50, yPercent: -50 });
+
+  var action = gsap.timeline({
+    defaults: { duration: 1, ease: 'none' },
+    scrollTrigger: {
+      trigger: "#path",
+      scrub: 0,
+      start: "top center",
+      end: "bottom center",
+    }
+  })
+    .from(".pathBall", { motionPath: { path: ".pathLine", align: ".pathLine", offsetX: 0, offsetY: 0, } }, 0)
+
   // // Swiper(множество одинаковых слайдеров)
   // if ($('.js-slider-wrapper').length) {
   //   const Swipers = Array.from(document.querySelectorAll('.js-slider-wrapper'), n => {

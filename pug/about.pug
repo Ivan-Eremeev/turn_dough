@@ -25,10 +25,14 @@ block content
       .story
         .wrapper 
 
-          .story__circle 
-            img(src="img/story-circle.png", alt="")
+          //- .story__circle 
+          //-   img(src="img/story-circle.png", alt="")
           .story__line 
-            img(src="img/story-line.png", alt="")
+            //- img(src="img/story-line.png", alt="")
+            <svg id="path" xmlns="http://www.w3.org/2000/svg" width="819" height="1202" viewBox="0 0 819 1202" fill="none">
+              <path class="pathLine" d="M752 1C728.5 67.8333 605 309.5 435 241C203.446 147.697 1.99953 311.5 3.49953 474C4.99953 636.5 2.99958 754.5 85.4996 857.5C168 960.5 232.529 1112.27 514 1019C767.5 935 870 1087.5 788 1200.5" stroke="#99DDE3" stroke-width="5" stroke-dasharray="1 16" stroke-linecap="round"/>
+              <circle class="pathBall" cx="14" cy="14" r="10" fill="white" stroke="#99DDE3" stroke-width="1"/>
+            </svg>
   
           .story__row.story__row--1
             .story__col 

@@ -66,8 +66,10 @@
     position: absolute;
     top: 30em;
     left: 33em;
-    img {
+    svg {
       width: 50.9em;
+      overflow: visible;
+      transform: scaleY(-1);
     }
   }
   @media (max-width: $break_sm) {
