@@ -2083,10 +2083,6 @@ body.lock {
   -ms-user-select: none;
   user-select: none;
 }
-.review__thumb .swiper-slide {
-  cursor: pointer;
-  text-align: center;
-}
 .review__thumb .swiper-slide-thumb-active .review__photo {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
@@ -2116,10 +2112,27 @@ body.lock {
   letter-spacing: -0.02em;
   color: #EC0187;
   opacity: 0;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .review {
-    padding-top: 7em;
+    padding: 10em 0 5em;
+  }
+  .review__title {
+    width: 100%;
+    font-size: 2.8em;
+  }
+  .review__slider {
+    width: 100%;
+  }
+  .review__thumb {
+    width: 100%;
+  }
+  .review__button {
+    display: none;
+  }
+  .review__block {
+    padding: 2em 1.6em 2.5em;
   }
 }
 
