@@ -1377,6 +1377,7 @@ body.lock {
 }
 .story__line svg {
   width: 50.9em;
+  height: 74em;
   overflow: visible;
   -webkit-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
