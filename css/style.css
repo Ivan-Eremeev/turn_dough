@@ -277,7 +277,7 @@ body.lock {
   border: 0.2em solid #99DDE3;
   border-radius: 100%;
   fill: #99DDE3;
-  left: 2.875em;
+  left: -2.5em;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -305,7 +305,7 @@ body.lock {
   border: 0.2em solid #99DDE3;
   border-radius: 100%;
   fill: #99DDE3;
-  right: 2.875em;
+  right: -2.5em;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1998,18 +1998,19 @@ body.lock {
   margin-bottom: 0.55em;
 }
 .review__slider {
-  width: 68.5em;
-  padding: 0 5em 2em;
+  width: 58.5em;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 1;
-  overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-bottom: 1.875em;
+  margin-bottom: 3.5em;
+}
+.review__slider #slideReview {
+  overflow: hidden;
 }
 .review__block {
   padding: 5em 6.6em 3.5em;
@@ -2020,7 +2021,7 @@ body.lock {
   position: relative;
 }
 .review__block p {
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -2062,8 +2063,8 @@ body.lock {
   background-repeat: no-repeat;
 }
 .review__thumb {
-  width: 35em;
-  padding: 1em;
+  width: 33em;
+  padding: 1em 0;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -2087,7 +2088,7 @@ body.lock {
   height: 5.4375em;
   border-radius: 100%;
   overflow: hidden;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 .review__photo img {
   width: 100%;
@@ -2101,9 +2102,6 @@ body.lock {
   letter-spacing: -0.02em;
   color: #EC0187;
   opacity: 0;
-}
-.review__button {
-  top: 43%;
 }
 @media (max-width: 768px) {
   .review {

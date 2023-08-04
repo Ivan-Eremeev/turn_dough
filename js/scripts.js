@@ -218,15 +218,14 @@ window.onload = function () {
     var sliderReviewThumb = new Swiper("#sliderReviewThumb", {
       slidesPerView: 5,
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 10,
       loop: true,
       watchSlidesProgress: true,
-      centerMode: true,
-      simulateTouch: false,
+      // centerMode: true,
     });
     var slideReview = new Swiper("#slideReview", {
       slidesPerView: 1,
-      spaceBetween: 150,
+      spaceBetween: 20,
       loop: true,
       navigation: {
         nextEl: ".review__button--next",
