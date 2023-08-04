@@ -1,6 +1,7 @@
 /* story */
 .story { 
   padding: 10em 0 8.7em;
+  position: relative;
   &__row {
     @include row();
     align-items: center;
@@ -53,6 +54,22 @@
   .subtitle {
     margin-bottom: 0.5em;
   }
+  &__circle {
+    position: absolute;
+    top: 19em;
+    left: 75em;
+    img {
+      width: 13.5em;
+    }
+  }
+  &__line {
+    position: absolute;
+    top: 30em;
+    left: 33em;
+    img {
+      width: 50.9em;
+    }
+  }
   @media (max-width: $break_sm) {
     padding: 5em 0;
     &__text {
@@ -71,6 +88,12 @@
     }
     &__half-text {
       columns: 1;
+    }
+    &__circle {
+      display: none;
+    }
+    &__line {
+      display: none;
     }
   }
 }
