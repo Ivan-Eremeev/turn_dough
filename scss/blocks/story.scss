@@ -21,6 +21,12 @@
         }
       }
     }
+    &--3 {
+      margin-top: 0;
+      > * {
+        padding-top: 0;
+      }
+    }
   }
   &__col {
     @include col(6);
