@@ -87,11 +87,36 @@
     background-repeat: no-repeat;
   }
   &__button {
+    width: 4.5em;
+    height: 4.5em;
+    margin-top: 0;
+    background-color: #FFFDFE;
+    border: 0.2em solid #99DDE3;
+    border-radius: 100%;
+    fill: #99DDE3;
+    transform: translate(0,-50%);
+    transition: .3s;
+    &:after {
+      display: none;
+    }
+    svg {
+      width: 2.1875em;
+      height: 1.875em;
+    }
     &--prev {
-      
+      left: -2.5em;
+      svg {
+        transform: rotate(180deg);
+      }
     }
     &--next {
-
+      right: -2.5em;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        fill: #fff;
+        background-color: #99DDE3;
+      }
     }
   }
   &__thumb {
