@@ -216,11 +216,13 @@ window.onload = function () {
 
   if ($('#slideReview').length) {
     var sliderReviewThumb = new Swiper("#sliderReviewThumb", {
-      slidesPerView: 4,
+      slidesPerView: 5,
+      centeredSlides: true,
       spaceBetween: 20,
       loop: true,
       watchSlidesProgress: true,
       centerMode: true,
+      simulateTouch: false,
     });
     var slideReview = new Swiper("#slideReview", {
       slidesPerView: 1,
