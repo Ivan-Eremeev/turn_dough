@@ -31,14 +31,14 @@
   }
   &__slider {
     width: 68.5em;
-    padding: 0 5em;
+    padding: 0 5em 2em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 1;
     overflow: hidden;
     user-select: none;
-    margin-bottom: 4.875em;
+    margin-bottom: 1.875em;
   }
   &__block {
     padding: 5em 6.6em 3.5em;
@@ -46,6 +46,7 @@
     border-radius: 2.5em;
     background: #FFF5FA;
     text-align: center;
+    position: relative;
     p {
       font-size: 18px;
       font-style: normal;
@@ -53,6 +54,23 @@
       line-height: 160%;
       margin-bottom: 1.7em;
     }
+    &:after {
+      content: '';
+      display: block;
+      width: 3.0625em;
+      height: 1.9375em;
+      background-image: url("data:image/svg+xml,%3Csvg width='49' height='31' viewBox='0 0 49 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_10_18)'%3E%3Cpath d='M22.9339 27.693L-1.54388 -8.23643C-2.67451 -9.89602 -1.48592 -12.144 0.522209 -12.144H49.4778C51.4859 -12.144 52.6745 -9.89603 51.5439 -8.23643L27.0661 27.693C26.0738 29.1496 23.9262 29.1496 22.9339 27.693Z' fill='%23FFFDFE' stroke='%2399DDE3' stroke-width='3'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_10_18'%3E%3Crect width='49' height='31' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%,0);
+      z-index: 1;
+    }
+  }
+  &__triangle {
+    
   }
   &__raiting {
     display: flex;
@@ -111,6 +129,9 @@
     letter-spacing: -0.02em;
     color: $primary_color;
     opacity: 0;
+  }
+  &__button {
+    top: 43%;
   }
   @media (max-width: $break_sm) {
     padding-top: 7em;
