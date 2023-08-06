@@ -189,20 +189,18 @@ window.onload = function () {
   gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
   // gsap.set('.pathBall', { xPercent: -50, yPercent: 20 });
+  // gsap.set('.pathBall', { xPercent: -50, yPercent: 20 });
 
-  var action = gsap
-    .timeline({
-      defaults: { duration: 1, ease: 'none' },
-      scrollTrigger: {
-        trigger: '.story',
-        scrub: 0.1,
-        start: '20% center',
-        end: 'bottom +=100%',
-        // markers: true,
-      },
-    })
-    .fromTo('.pathBall', { xPercent: -37, yPercent: -117 }, { xPercent: -50, yPercent: -100 }, 0)
-    .from('.pathBall', { motionPath: { path: '.pathLine', align: '.pathLine' } }, 0);
+  var action = gsap.timeline({
+    defaults: { duration: 1, ease: 'none' },
+    scrollTrigger: {
+      trigger: "#path",
+      scrub: 0,
+      start: "top center",
+      end: "bottom center",
+    }
+  })
+    .from(".pathBall", { motionPath: { path: ".pathLine", align: ".pathLine", offsetX: 0, offsetY: 0, } }, 0)
 
   // Map
   let map;
@@ -217,7 +215,7 @@ window.onload = function () {
     };
 
     map = new Map(document.getElementById("map"), {
-      center: location[0],
+      center: { lat: 33.984577345655985, lng: -118.46422749999999 },
       zoom: 15,
       styles: [
         {
