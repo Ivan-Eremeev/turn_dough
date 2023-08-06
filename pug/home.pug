@@ -221,15 +221,23 @@ block content
                   svg(class="icon-point")
                     use(xlink:href="img/sprite.svg#point")
                 span Venice
-            .contact__text 
-              h3 Turn Dough
-              p 1425 Ocean Front Walk, Ocean Front Walk, Venice, California 90291, United States
-            .contact__text 
-              h3 Contact information
-              p Promotional: marketing@turndough.com General: info@turndough.com Phone Number: (424) 307-5005
-            .contact__text 
-              h3 Hours
-              p Open 7 Days a Week from noon until sellout
+            .contact__block.open(data-num='0')
+              .contact__text 
+                h3 Turn Dough
+                p 1425 Ocean Front Walk, Ocean Front Walk, Venice, California 90291, United States
+              .contact__text 
+                h3 Contact information
+                p Promotional: marketing@turndough.com General: info@turndough.com Phone Number: (424) 307-5005
+              .contact__text 
+                h3 Hours
+                p Open 7 Days a Week from noon until sellout
+            .contact__block(data-num='1')
+              .contact__text 
+                h3 Turn Dough
+                p 1425 Ocean Front Walk, Ocean Front Walk, Venice, California 90291, United States
+              .contact__text 
+                h3 Contact information
+                p Promotional: marketing@turndough.com General: info@turndough.com Phone Number: (424) 307-5005
         .contact__map 
           #map 
       // /contact

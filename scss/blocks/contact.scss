@@ -1,5 +1,6 @@
 /* contact */
 .contact { 
+  min-height: 50em;
   padding: 7.6em 0 6.3em;
   background-color: #91D7E1;
   position: relative;
@@ -40,13 +41,13 @@
     height: 3.6em;
     padding-left: 4.5em;
     padding-right: 1.5em;
-    background-color: $primary_color;
+    background-color: #FFF5FA;
     border: 0.1875em solid $primary_color;
     border-radius: 3em;
     text-transform: uppercase;
     outline: none;
     position: relative;
-    color: #fff;
+    color: $primary_color;
     transition: .3s;
     span {
       font-family: "Kelpo";
@@ -61,8 +62,8 @@
       }
     }
     &.active {
-      background-color: #FFF5FA;
-      color: $primary_color;
+      background-color: $primary_color;
+      color: #FFF5FA;
     }
   }
   &__btn-icon {
@@ -106,7 +107,14 @@
       width: 10em;
     }
   }
+  &__block {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
   @media (max-width: $break_sm) {
+    min-height: 0;
     padding: 5em 0 4em;
     &__map {
       position: static;

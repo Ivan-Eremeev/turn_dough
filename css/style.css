@@ -1092,6 +1092,7 @@ body.lock {
 /* /instagram */
 /* contact */
 .contact {
+  min-height: 50em;
   padding: 7.6em 0 6.3em;
   background-color: #91D7E1;
   position: relative;
@@ -1139,13 +1140,13 @@ body.lock {
   height: 3.6em;
   padding-left: 4.5em;
   padding-right: 1.5em;
-  background-color: #EC0187;
+  background-color: #FFF5FA;
   border: 0.1875em solid #EC0187;
   border-radius: 3em;
   text-transform: uppercase;
   outline: none;
   position: relative;
-  color: #fff;
+  color: #EC0187;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1160,8 +1161,8 @@ body.lock {
   }
 }
 .contact__btn.active {
-  background-color: #FFF5FA;
-  color: #EC0187;
+  background-color: #EC0187;
+  color: #FFF5FA;
 }
 .contact__btn-icon {
   display: -webkit-box;
@@ -1211,8 +1212,15 @@ body.lock {
 .contact__fly img {
   width: 10em;
 }
+.contact__block {
+  display: none;
+}
+.contact__block.open {
+  display: block;
+}
 @media (max-width: 768px) {
   .contact {
+    min-height: 0;
     padding: 5em 0 4em;
   }
   .contact__map {
