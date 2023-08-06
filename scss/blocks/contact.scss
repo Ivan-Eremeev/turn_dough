@@ -40,13 +40,13 @@
     height: 3.6em;
     padding-left: 4.5em;
     padding-right: 1.5em;
-    background-color: $primary_color;
+    background-color: #FFF5FA;
     border: 0.1875em solid $primary_color;
     border-radius: 3em;
     text-transform: uppercase;
     outline: none;
     position: relative;
-    color: #fff;
+    color: $primary_color;
     transition: .3s;
     span {
       font-family: "Kelpo";
@@ -61,8 +61,8 @@
       }
     }
     &.active {
-      background-color: #FFF5FA;
-      color: $primary_color;
+      background-color: $primary_color;
+      color: #FFF5FA;
     }
   }
   &__btn-icon {
