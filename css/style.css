@@ -462,6 +462,7 @@ body.lock {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 .welcome-slider__bg img {
   width: 100%;
@@ -474,6 +475,8 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  position: relative;
+  z-index: 3;
 }
 .welcome-slider .wrapper {
   display: -webkit-box;
@@ -544,6 +547,15 @@ body.lock {
     transform: scale(1.05);
   }
 }
+.welcome-slider__fly {
+  position: absolute;
+  top: 5em;
+  left: 4em;
+  z-index: 2;
+}
+.welcome-slider__fly img {
+  width: 108em;
+}
 @media (max-width: 768px) {
   .welcome-slider {
     padding-top: 5.5em;
@@ -564,6 +576,9 @@ body.lock {
   .welcome-slider__content {
     width: 100%;
     padding: 4em 0 1em;
+  }
+  .welcome-slider__fly {
+    display: none;
   }
 }
 
