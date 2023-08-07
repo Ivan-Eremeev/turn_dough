@@ -19,9 +19,11 @@
     font-size: 1.125em;
     line-height: 140%;
     margin-bottom: 4.3em;
+    color: $primary_color;
   }
   &__slider {
     user-select: none;
+    position: relative;
   }
   &__block {
     
@@ -50,11 +52,13 @@
     }
   }
   &__title {
+    display: block;
     font-family: "Kelpo";
     font-size: 2.75em;
-    line-height: 160%;
+    line-height: 110%;
     letter-spacing: -0.88px;
     color: $primary_color;
+    margin-bottom: 0.2em;
     @media (min-width: $break_sm + 1) {
       &:hover {
         color: $secondary_color;
@@ -101,6 +105,40 @@
       width: 4em;
     }
   }
+  &__button {
+    width: 4.5em;
+    height: 4.5em;
+    margin-top: 0;
+    background-color: #FFFDFE;
+    border: 0.2em solid #99DDE3;
+    border-radius: 100%;
+    fill: #99DDE3;
+    transform: translate(0,-50%);
+    transition: .3s;
+    top: 16em;
+    &:after {
+      display: none;
+    }
+    svg {
+      width: 2.1875em;
+      height: 1.875em;
+    }
+    &--prev {
+      left: -2.5em;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &--next {
+      right: -2.5em;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        fill: #fff;
+        background-color: #99DDE3;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     padding: 6em 0 5em;
     .title {
@@ -125,6 +163,15 @@
     }
     &__fly-2 {
       display: none;
+    }
+    &__button {
+      top: 11em;
+      &--prev {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
     }
   }
 }

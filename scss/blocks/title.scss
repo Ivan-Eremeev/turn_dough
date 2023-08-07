@@ -7,6 +7,9 @@
   span {
     color: $secondary_color;
   }
+  b {
+    font-family: "Ramillas";
+  }
   @media (max-width: $break_sm) {
     font-size: 3.2em;
   }

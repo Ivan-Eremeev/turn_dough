@@ -104,7 +104,9 @@ block content
           img(src="img/flying/img-3.png", alt="").js-parallaxMouse
         .products-slider__block 
           .wrapper 
-            .title 18 Irresistible Chimney Cakes: <br>A Scrumptious Journey of Flavors!
+            .title 
+              b 18 
+              | Irresistible Chimney Cakes: <br>A Scrumptious Journey of Flavors!
             .products-slider__sub Today, we proudly offer 18 signature Chimney cakes with Soft Serve Gelato, <br>allowing you to indulge in a variety of delectable combinations.
             .products-slider__slider 
               #sliderProduct 
@@ -129,6 +131,12 @@ block content
                     +product-slier-card
                   .swiper-slide 
                     +product-slier-card
+              .products-slider__button.products-slider__button--prev.swiper-button-prev
+                    svg(class="icon-arrow")
+                      use(xlink:href="img/sprite.svg#arrow")
+              .products-slider__button.products-slider__button--next.swiper-button-next
+                svg(class="icon-arrow")
+                  use(xlink:href="img/sprite.svg#arrow")
       // /products-slider
 
       // besides

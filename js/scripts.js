@@ -31,66 +31,66 @@ window.onload = function () {
 	};
 	menuScroll($('.js-scroll-to'));
 
-  // Parralax mouse
-	function parallaxMove(parallax) {
-		if (parallax.length) {
-			parallax.each(function () {
-				var $window = $(window),
-					$this = $(this),
-					direction = $this.data('direction'),
-					intensity = $this.data('intensity'),
-					speed = $this.data('speed'),
-					revers = $this.data('revers');
-				if (!direction) {
-					direction = 'xy';
-				}
-				if (!intensity) {
-					intensity = 3;
-				}
-				if (!speed) {
-					speed = 100;
-				}
-				if (!revers) {
-					revers = false;
-				}
-				$this.css({ transition: (speed / 1000) + 's' });
-				$window.mousemove(function (event) {
-					var left = event.clientX,
-						top = event.clientY,
-						windowWidth = $window.width(),
-						windowHeight = $window.height();
-					if (revers) {
-						moveX = ((left - windowWidth / 2) * intensity / 100 * -1).toFixed(),
-							moveY = ((top - windowHeight / 2) * intensity / 100 * -1).toFixed();
-					} else {
-						moveX = ((left - windowWidth / 2) * intensity / 100).toFixed(),
-							moveY = ((top - windowHeight / 2) * intensity / 100).toFixed();
-					}
-					inVisible($this);
-					function inVisible(element) {
-						var topScroll = $(document).scrollTop(),
-							screenHeight = $(window).height(),
-							bottomScroll = topScroll + screenHeight,
-							elementHeight = element.height(),
-							elementTop = element.offset().top,
-							elementBottom = elementTop + elementHeight;
-						if (elementTop < bottomScroll && elementBottom > topScroll) {
-							if (direction == 'xy') {
-								$this.css({ transform: 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)' });
-							}
-							else if (direction == 'x') {
-								$this.css({ transform: 'translateX(' + moveX + 'px)' });
-							}
-							else if (direction == 'y') {
-								$this.css({ transform: 'translateY(' + moveY + 'px)' });
-							}
-						}
-					};
-				});
-			});
-		}
-	};
-	parallaxMove($('.js-parallaxMouse'));
+  // // Parralax mouse
+	// function parallaxMove(parallax) {
+	// 	if (parallax.length) {
+	// 		parallax.each(function () {
+	// 			var $window = $(window),
+	// 				$this = $(this),
+	// 				direction = $this.data('direction'),
+	// 				intensity = $this.data('intensity'),
+	// 				speed = $this.data('speed'),
+	// 				revers = $this.data('revers');
+	// 			if (!direction) {
+	// 				direction = 'xy';
+	// 			}
+	// 			if (!intensity) {
+	// 				intensity = 3;
+	// 			}
+	// 			if (!speed) {
+	// 				speed = 100;
+	// 			}
+	// 			if (!revers) {
+	// 				revers = false;
+	// 			}
+	// 			$this.css({ transition: (speed / 1000) + 's' });
+	// 			$window.mousemove(function (event) {
+	// 				var left = event.clientX,
+	// 					top = event.clientY,
+	// 					windowWidth = $window.width(),
+	// 					windowHeight = $window.height();
+	// 				if (revers) {
+	// 					moveX = ((left - windowWidth / 2) * intensity / 100 * -1).toFixed(),
+	// 						moveY = ((top - windowHeight / 2) * intensity / 100 * -1).toFixed();
+	// 				} else {
+	// 					moveX = ((left - windowWidth / 2) * intensity / 100).toFixed(),
+	// 						moveY = ((top - windowHeight / 2) * intensity / 100).toFixed();
+	// 				}
+	// 				inVisible($this);
+	// 				function inVisible(element) {
+	// 					var topScroll = $(document).scrollTop(),
+	// 						screenHeight = $(window).height(),
+	// 						bottomScroll = topScroll + screenHeight,
+	// 						elementHeight = element.height(),
+	// 						elementTop = element.offset().top,
+	// 						elementBottom = elementTop + elementHeight;
+	// 					if (elementTop < bottomScroll && elementBottom > topScroll) {
+	// 						if (direction == 'xy') {
+	// 							$this.css({ transform: 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)' });
+	// 						}
+	// 						else if (direction == 'x') {
+	// 							$this.css({ transform: 'translateX(' + moveX + 'px)' });
+	// 						}
+	// 						else if (direction == 'y') {
+	// 							$this.css({ transform: 'translateY(' + moveY + 'px)' });
+	// 						}
+	// 					}
+	// 				};
+	// 			});
+	// 		});
+	// 	}
+	// };
+	// parallaxMove($('.js-parallaxMouse'));
 
   // Swiper
   if ($('#sliderWelcolme').length) {
@@ -116,8 +116,12 @@ window.onload = function () {
       threshold: 3,
       loop: true,
       centeredSlides: true,
+      navigation: {
+        nextEl: ".products-slider__button--next",
+        prevEl: ".products-slider__button--prev",
+      },
       breakpoints: {
-        1050: {
+        769: {
           slidesPerView: 3,
           spaceBetween: 15,
           centeredSlides: false,
@@ -136,7 +140,7 @@ window.onload = function () {
       loop: true,
       centeredSlides: true,
       breakpoints: {
-        1050: {
+        769: {
           slidesPerView: 4,
           spaceBetween: 20,
           centeredSlides: false,
@@ -151,8 +155,6 @@ window.onload = function () {
       centeredSlides: true,
       spaceBetween: 10,
       watchSlidesProgress: true,
-      // simulateTouch: false,
-      // allowTouchMove: false,
       breakpoints: {
         769: {
           slidesPerView: 5,

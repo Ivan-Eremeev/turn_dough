@@ -21,6 +21,7 @@ $break_xs: 500px;
 @include font-face("Kelpo", "../fonts/kelpo_DEMO/FontsFree-Net-KelpoDemo-MVv9J", normal, normal, $exts: woff2 woff ttf);
 @include font-face("Roboto", "../fonts/roboto/roboto-v30-latin-regular", normal, normal, $exts: woff2 woff ttf);
 @include font-face("Roboto", "../fonts/roboto/roboto-v30-latin-500", 500, normal, $exts: woff2 woff ttf);
+@include font-face("Ramillas", "../fonts/tt_ramillas/TT Ramillas Trial Black", 900, normal, $exts: woff2 woff ttf);
 
 // Цвета
 $primary_color: #EC0187;

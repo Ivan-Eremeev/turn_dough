@@ -90,6 +90,13 @@ h1, h2, h3 {
   src: url("../fonts/roboto/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-500.woff") format("woff"), url("../fonts/roboto/roboto-v30-latin-500.ttf") format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Ramillas";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/tt_ramillas/TT Ramillas Trial Black.woff2") format("woff2"), url("../fonts/tt_ramillas/TT Ramillas Trial Black.woff") format("woff"), url("../fonts/tt_ramillas/TT Ramillas Trial Black.ttf") format("truetype");
+  font-display: swap;
+}
 /* settings */
 html {
   font-size: 0.85vw;
@@ -320,6 +327,9 @@ body.lock {
 }
 .title span {
   color: #99DDE3;
+}
+.title b {
+  font-family: "Ramillas";
 }
 @media (max-width: 768px) {
   .title {
@@ -584,7 +594,7 @@ body.lock {
   min-height: 49em;
 }
 .benefit__content .subtitle {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.9em;
 }
 .benefit__text {
   width: 29em;
@@ -650,7 +660,7 @@ body.lock {
 }
 .benefit__fly {
   position: absolute;
-  top: -3em;
+  top: -4em;
   left: 12em;
   z-index: 1;
 }
@@ -705,12 +715,14 @@ body.lock {
   font-size: 1.125em;
   line-height: 140%;
   margin-bottom: 4.3em;
+  color: #EC0187;
 }
 .products-slider__slider {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  position: relative;
 }
 .products-slider__img {
   display: -webkit-box;
@@ -741,11 +753,13 @@ body.lock {
   }
 }
 .products-slider__title {
+  display: block;
   font-family: "Kelpo";
   font-size: 2.75em;
-  line-height: 160%;
+  line-height: 110%;
   letter-spacing: -0.88px;
   color: #EC0187;
+  margin-bottom: 0.2em;
 }
 @media (min-width: 769px) {
   .products-slider__title:hover {
@@ -792,6 +806,45 @@ body.lock {
 .products-slider__fly-2 img {
   width: 4em;
 }
+.products-slider__button {
+  width: 4.5em;
+  height: 4.5em;
+  margin-top: 0;
+  background-color: #FFFDFE;
+  border: 0.2em solid #99DDE3;
+  border-radius: 100%;
+  fill: #99DDE3;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 16em;
+}
+.products-slider__button:after {
+  display: none;
+}
+.products-slider__button svg {
+  width: 2.1875em;
+  height: 1.875em;
+}
+.products-slider__button--prev {
+  left: -2.5em;
+}
+.products-slider__button--prev svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.products-slider__button--next {
+  right: -2.5em;
+}
+@media (min-width: 769px) {
+  .products-slider__button:hover {
+    fill: #fff;
+    background-color: #99DDE3;
+  }
+}
 @media (max-width: 768px) {
   .products-slider {
     padding: 6em 0 5em;
@@ -818,6 +871,15 @@ body.lock {
   }
   .products-slider__fly-2 {
     display: none;
+  }
+  .products-slider__button {
+    top: 11em;
+  }
+  .products-slider__button--prev {
+    left: 0;
+  }
+  .products-slider__button--next {
+    right: 0;
   }
 }
 
@@ -856,7 +918,7 @@ body.lock {
   color: #EC0187;
 }
 .besides__item img {
-  width: 5.5em;
+  width: 6.2em;
   margin-top: -1em;
   margin-right: 0.5em;
 }
@@ -1119,6 +1181,7 @@ body.lock {
   font-weight: 500;
   line-height: 150%;
   margin-bottom: 1.25em;
+  color: #4A758D;
 }
 .contact__buttons {
   display: -webkit-box;
@@ -1203,6 +1266,7 @@ body.lock {
 .contact__text p {
   font-weight: 500;
   line-height: 150%;
+  color: #4A758D;
 }
 .contact__fly {
   position: absolute;
@@ -1542,12 +1606,12 @@ body.lock {
 }
 .catalog__fly-5 {
   position: absolute;
-  top: -3em;
-  left: 35em;
+  top: -3.5em;
+  left: 33em;
   z-index: 1;
 }
 .catalog__fly-5 img {
-  width: 9em;
+  width: 12em;
 }
 .catalog__fly-6 {
   position: absolute;
@@ -1569,12 +1633,12 @@ body.lock {
 }
 .catalog__fly-8 {
   position: absolute;
-  top: -3em;
-  left: 48em;
+  top: -4em;
+  left: 47em;
   z-index: 1;
 }
 .catalog__fly-8 img {
-  width: 9em;
+  width: 12em;
 }
 .catalog__fly-9 {
   position: absolute;
@@ -1632,10 +1696,10 @@ body.lock {
   }
   .catalog__fly-5 {
     left: 4em;
-    top: -2em;
+    top: -3em;
   }
   .catalog__fly-5 img {
-    width: 6em;
+    width: 9em;
   }
   .catalog__fly-6 {
     left: 3em;
@@ -2174,6 +2238,8 @@ body.lock {
   margin-top: 0.625em;
   background-color: #fff;
   border: 0.125em solid #EC0187;
+  -webkit-box-shadow: -0.3em 0.3em 0 #EC0187;
+  box-shadow: -0.3em 0.3em 0 #EC0187;
   border-radius: 100%;
   fill: #EC0187;
   -webkit-transition: 0.3s;
