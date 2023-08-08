@@ -92,6 +92,11 @@ window.onload = function () {
 	// };
 	// parallaxMove($('.js-parallaxMouse'));
 
+  var rellax = new Rellax('.js-parallaxMouse', {
+    speed: -2,
+    center: true
+  });
+
   // Swiper
   if ($('#sliderWelcolme').length) {
     const sliderWelcolme = new Swiper('#sliderWelcolme', {

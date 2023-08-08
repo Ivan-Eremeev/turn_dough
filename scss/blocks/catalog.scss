@@ -10,7 +10,7 @@
       flex-wrap: wrap;
       min-height: 37em;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
   }
   &__bg {
@@ -147,6 +147,15 @@
       width: 14em;
     }
   }
+  &__head-fly {
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    z-index: 1;
+    img {
+      width: 113em;
+    }
+  }
   @media (max-width: $break_sm) {
     padding-bottom: 6em;
     &__title {
@@ -230,6 +239,9 @@
         padding-left: 2.6em;
         padding-top: 2.6em;
       }
+    }
+    &__head-fly {
+      display: none;
     }
   }
 }
