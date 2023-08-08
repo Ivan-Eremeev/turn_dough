@@ -69,8 +69,7 @@
     svg {
       width: 50.9em;
       height: 74em;
-      overflow: visible;
-      transform: scaleY(-1);
+      overflow: visible
     }
   }
   @media (max-width: $break_sm) {
